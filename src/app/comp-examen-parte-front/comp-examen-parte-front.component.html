@@ -1,0 +1,30 @@
+<h1>Exámen Parte Front</h1>
+<h4>Se quiere sacar la información de los autobuses y sus visitas:</h4>
+<div class="container-fluid text-light" #content>
+    <div class="row clearfix">
+      <div class="col-sm-12 col-md-6 text-light">
+        <div >
+            <table class="tabla" border="4">
+                <tr class="tituloTabla">
+                    <th>autobuses</th>
+                    <th>visitas</th>
+                </tr>
+                <tr *ngFor="let elemento of infoAutobuses">
+                    <td>{{elemento.matricula}}</td>
+                    <td>{{elemento.idVisitas}}</td>
+                </tr>
+                <!-- ngFor para que me saque algún dato en la tabla, sino no me sacará nada porque no tengo la parte Back -->
+                <tr *ngFor="let elemento of matriculasBuses; let i = index">
+                    <td>{{elemento}}</td>
+                    <td>{{visitas [i]}}</td>
+                </tr>
+            </table>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <img src="../../assets/Planeta_Tierra.PNG" class="imagenTierra" alt="Imagen">
+      </div>
+    </div>
+</div>
+
+
